@@ -47,7 +47,7 @@ function formatTime(seconds) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('http://localhost:3000/questions')
+  fetch('https://exam-app-m9xj.onrender.com/questions')
     .then(response => response.json())
     .then(questions => {
       const examDiv = document.getElementById('exam');
@@ -75,7 +75,7 @@ function submitExam() {
     answer: input.value
   }));
 
-  fetch('http://localhost:3000/questions')
+  fetch('https://exam-app-m9xj.onrender.com/questions')
     .then(response => response.json())
     .then(questions => {
       let score = 0;
