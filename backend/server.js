@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 // SQLiteデータベースの接続
-const db = new sqlite3.Database('./exam.db');
+const db = new sqlite3.Database('../exam.db');
 
 // ミドルウェア
 app.use(express.json());
