@@ -32,7 +32,7 @@ db.serialize(() => {
     answer TEXT,
     type TEXT  -- 'single' または 'multiple' を格納
   )`);
-  db.run(`INSERT questions (question, options, answer, type) VALUES ($quot;問題1\nAfter creating the table MY_TABLE, we execute the following commands:\nCREATE STREAM MYSTREAM ON TABLE MYTABLE;\nINSERT INTO MYTABLE VALUES (15);\nWhat will be the output of executing the following command?\nSELECT SYSTEM$STREAM_HAS_DATA('MYSTREAM');$quot;, '[$quot;1.It will return True.$quot;, $quot;2.It will return False.$quot;, $quot;3.It will return 15.$quot;,$quot;4.It will return Null.$quot;]', '1.It will return True.', single)`);
+  db.run(`INSERT INTO questions (question, options, answer, type) VALUES ("問題1\nAfter creating the table MY_TABLE, we execute the following commands:\nCREATE STREAM MYSTREAM ON TABLE MYTABLE;\nINSERT INTO MYTABLE VALUES (15);\nWhat will be the output of executing the following command?\nSELECT SYSTEM$STREAM_HAS_DATA('MYSTREAM');", "['1.It will return True.', '2.It will return False.', '3.It will return 15.','4.It will return Null.']", "1.It will return True.", "single");`);
 });
 
 //API
