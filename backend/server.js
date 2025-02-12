@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 // SQLiteデータベースの接続
-const db = new sqlite3.Database('./exam.db');
+const db = new sqlite3.Database('../exam.db');
 
 // ミドルウェア
 app.use(express.json());
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+  console.log(`Server is running on https://exam-app-m9xj.onrender.com:${port}`);
 });
 
 // データベースのテーブル作成＆初期データINSERT
